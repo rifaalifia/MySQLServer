@@ -81,6 +81,17 @@ select id,name,age,date,amount from customers as c,orders as o where c.id = o.cu
 select id,name,age,date,amount from customers inner join orders on customers.id = orders.customerid;
 
 
+#left join
+select id,name,age,date,amount from customers left join orders on customers.id = orders.customerid;
+
+#right join
+select id,name,age,date,amount from customers right join orders on customers.id = orders.customerid;
+
+#full join
+select id,name,age,date,amount from customers left join orders on customers.id = orders.customerid
+union 
+select id,name,age,date,amount from customers right join orders on customers.id = orders.customerid;
+
 
 
 
